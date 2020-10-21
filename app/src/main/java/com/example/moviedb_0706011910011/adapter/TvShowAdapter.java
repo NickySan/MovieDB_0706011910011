@@ -47,7 +47,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.CardViewVi
     @Override
     public void onBindViewHolder(@NonNull final TvShowAdapter.CardViewViewHolder holder, int position) {
         TvShow tvShow = getListTvShow().get(position);
-        Glide.with(context).load(tvShow.getPoster()).centerCrop().into(holder.img);
+        Glide.with(context).load(tvShow.getCover()).centerCrop().into(holder.img);
         holder.lbl_title.setText(tvShow.getTitle());
         holder.lbl_date.setText(tvShow.getReleaseDate());
         holder.lbl_vote.setText(tvShow.getVote());

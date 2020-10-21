@@ -47,7 +47,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.CardViewView
     @Override
     public void onBindViewHolder(@NonNull final MovieAdapter.CardViewViewHolder holder, int position) {
         Movie movie = getListMovie().get(position);
-        Glide.with(context).load(movie.getPoster()).centerCrop().into(holder.img);
+        Glide.with(context).load(movie.getCover()).centerCrop().into(holder.img);
         holder.lbl_title.setText(movie.getTitle());
         holder.lbl_date.setText(movie.getReleaseDate());
         holder.lbl_vote.setText(movie.getVote());

@@ -6,9 +6,9 @@ import android.os.Parcelable;
 import com.example.moviedb_0706011910011.util.Constants;
 import com.google.gson.annotations.SerializedName;
 
-public class Movie implements Parcelable {
+public class TvShow implements Parcelable {
     @SerializedName("id")
-    private String id_movie;
+    private String id_show;
 
     @SerializedName("popularity")
     private String popularity;
@@ -19,24 +19,23 @@ public class Movie implements Parcelable {
     @SerializedName("backdrop_path")
     private String cover;
 
-    @SerializedName("title")
+    @SerializedName("name")
     private String title;
 
     @SerializedName("overview")
     private String description;
 
-    @SerializedName("release_date")
+    @SerializedName("first_air_date")
     private String releaseDate;
 
     @SerializedName("vote_average")
     private String vote;
 
-
-    public Movie() {
+    public TvShow() {
     }
 
-    public Movie(String id_movie, String popularity, String poster, String cover, String title, String description, String releaseDate, String vote) {
-        this.id_movie = id_movie;
+    public TvShow(String id_show, String popularity, String poster, String cover, String title, String description, String releaseDate, String vote) {
+        this.id_show = id_show;
         this.popularity = popularity;
         this.poster = poster;
         this.cover = cover;
@@ -46,8 +45,8 @@ public class Movie implements Parcelable {
         this.vote = vote;
     }
 
-    protected Movie(Parcel in) {
-        id_movie = in.readString();
+    protected TvShow(Parcel in) {
+        id_show = in.readString();
         popularity = in.readString();
         poster = in.readString();
         cover = in.readString();
@@ -57,24 +56,24 @@ public class Movie implements Parcelable {
         vote = in.readString();
     }
 
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+    public static final Creator<TvShow> CREATOR = new Creator<TvShow>() {
         @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
+        public TvShow createFromParcel(Parcel in) {
+            return new TvShow(in);
         }
 
         @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
+        public TvShow[] newArray(int size) {
+            return new TvShow[size];
         }
     };
 
-    public String getId_movie() {
-        return id_movie;
+    public String getId_show() {
+        return id_show;
     }
 
-    public void setId_movie(String id_movie) {
-        this.id_movie = id_movie;
+    public void setId_show(String id_show) {
+        this.id_show = id_show;
     }
 
     public String getPopularity() {
@@ -140,13 +139,12 @@ public class Movie implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id_movie);
+        dest.writeString(id_show);
         dest.writeString(popularity);
         dest.writeString(poster);
         dest.writeString(cover);
         dest.writeString(title);
         dest.writeString(description);
         dest.writeString(releaseDate);
-        dest.writeString(vote);
     }
 }

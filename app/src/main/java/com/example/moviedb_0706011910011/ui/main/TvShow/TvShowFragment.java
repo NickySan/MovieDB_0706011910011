@@ -15,11 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.moviedb_0706011910011.R;
-import com.example.moviedb_0706011910011.adapter.MovieAdapter;
 import com.example.moviedb_0706011910011.adapter.TvShowAdapter;
-import com.example.moviedb_0706011910011.model.Movie;
 import com.example.moviedb_0706011910011.model.TvShow;
-import com.example.moviedb_0706011910011.ui.main.movie.MovieViewModel;
 
 import java.util.List;
 
@@ -27,6 +24,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TvShowFragment extends Fragment {
+
     @BindView(R.id.rv_tvShow)
     RecyclerView rv_tvShow;
 
@@ -72,4 +70,5 @@ public class TvShowFragment extends Fragment {
             //add adapter to recycler view
         }
     };
+
 }

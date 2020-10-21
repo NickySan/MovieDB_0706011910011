@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListAdapter;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.moviedb_0706011910011.R;
@@ -33,6 +34,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MovieFragment extends Fragment {
+    @BindView(R.id.progressBar)
+    ProgressBar loading;
+
     @BindView(R.id.rv_movie)
     RecyclerView rv_movie;
 
@@ -53,6 +57,7 @@ public class MovieFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+        showLoading(true);
         adapter = new MovieAdapter(getContext());
 
         rv_movie.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -67,8 +72,18 @@ public class MovieFragment extends Fragment {
             //set adapter
                 adapter.setListMovie(movies);
                 adapter.notifyDataSetChanged();
+                showLoading(false);
 //                rv_movie.setAdapter(adapter);
             //add adapter to recycler view
         }
 };
+    private void showLoading(Boolean state) {
+        if (state) {
+            rv_movie.setVisibility(View.GONE);
+            loading.setVisibility(View.VISIBLE);
+        } else {
+            rv_movie.setVisibility(View.VISIBLE);
+            loading.setVisibility(View.GONE);
+        }
+    }
 }

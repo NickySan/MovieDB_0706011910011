@@ -3,8 +3,8 @@ package com.example.moviedb_0706011910011.ui.main.detail;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.moviedb_0706011910011.model.Cast;
-import com.example.moviedb_0706011910011.model.Genre;
+import com.example.moviedb_0706011910011.model.cast.Cast;
+import com.example.moviedb_0706011910011.model.genre.Genre;
 import com.example.moviedb_0706011910011.repository.MovieRepository;
 import com.example.moviedb_0706011910011.repository.TvShowRepository;
 

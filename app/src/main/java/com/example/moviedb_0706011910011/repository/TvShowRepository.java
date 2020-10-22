@@ -4,12 +4,10 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.moviedb_0706011910011.model.Cast;
-import com.example.moviedb_0706011910011.model.CastResponse;
-import com.example.moviedb_0706011910011.model.Genre;
-import com.example.moviedb_0706011910011.model.GenreResponse;
-import com.example.moviedb_0706011910011.model.Movie;
-import com.example.moviedb_0706011910011.model.MovieResponse;
+import com.example.moviedb_0706011910011.model.cast.Cast;
+import com.example.moviedb_0706011910011.model.cast.CastResponse;
+import com.example.moviedb_0706011910011.model.genre.Genre;
+import com.example.moviedb_0706011910011.model.genre.GenreResponse;
 import com.example.moviedb_0706011910011.model.TvShow;
 import com.example.moviedb_0706011910011.model.TvShowResponse;
 import com.example.moviedb_0706011910011.network.RetrofitService;

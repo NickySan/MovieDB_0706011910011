@@ -1,7 +1,7 @@
 package com.example.moviedb_0706011910011.network;
 
-import com.example.moviedb_0706011910011.model.CastResponse;
-import com.example.moviedb_0706011910011.model.GenreResponse;
+import com.example.moviedb_0706011910011.model.cast.CastResponse;
+import com.example.moviedb_0706011910011.model.genre.GenreResponse;
 import com.example.moviedb_0706011910011.model.MovieResponse;
 import com.example.moviedb_0706011910011.model.TvShowResponse;
 import com.example.moviedb_0706011910011.util.Constants;

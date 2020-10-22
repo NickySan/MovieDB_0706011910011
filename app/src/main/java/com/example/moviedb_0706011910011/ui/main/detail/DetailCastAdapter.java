@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.moviedb_0706011910011.R;
-import com.example.moviedb_0706011910011.model.Cast;
+import com.example.moviedb_0706011910011.model.cast.Cast;
 import com.example.moviedb_0706011910011.util.Constants;
 
 import java.util.List;
